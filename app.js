@@ -16,8 +16,6 @@ const { MONGOURI } = require('./config/keys')
 //mongoDB
 const mongoose = require('mongoose')
 
-
-const indexRouter = require('./routes/index');
 const userRouter = require('./routes/users')
 const companyRouter = require('./routes/company')
 const reviewRouter = require('./routes/reviews')
@@ -32,7 +30,6 @@ app.use(logger('dev'));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 //auth
 app.use(session({
@@ -44,7 +41,6 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use('/', indexRouter)
 app.use('/users', userRouter)
 app.use('/company', companyRouter)
 app.use('/reviews', reviewRouter)
@@ -82,7 +78,5 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-
 
 module.exports = app;

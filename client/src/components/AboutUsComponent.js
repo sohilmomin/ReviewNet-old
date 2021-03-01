@@ -64,7 +64,7 @@ class AboutUs extends Component {
                     <div className="col-12">
                         <div className="row mb-2">
                             <div className='col-12 col-md-3'>
-                                <img top cap className="img img-responsive thumb" src="/assets/images/sohil.png" alt="leader image " />
+                                <img top cap className="img img-responsive thumb" src="/assets/images/Sohil.png" alt="leader image " />
                             </div>
                             <div className='col-12 col-md-9 pt-2 pl-md-0'>
                                 <h4>Mohamadsohil Momin</h4>

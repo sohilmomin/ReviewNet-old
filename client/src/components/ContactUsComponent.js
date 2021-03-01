@@ -8,7 +8,7 @@ class ContactUs extends Component {
                     <a className='col-md-5 col-11 contactus-icon' target="_blank" href='https://www.linkedin.com/in/mohamadsohil-momin'>
                         <div className='row'>
                             <div className='col-4 platform-div' >
-                                <img top cap className="img img-responsive thumb contactus-img" src="/assets/images/social-media/linkedin.png" alt="leader image " />
+                                <img top cap className="img img-responsive thumb contactus-img" src="/assets/images/social-media/linkedIn.png" alt="leader image " />
                             </div>
                             <div className='col-8 pl-0'><h4 className='contactus-platform'>LinkedIn</h4><p className='username'>Mohamadsohil Momin</p><p className='profile-link'>https://www.linkedin.com/in/mohamadsohil-momin</p></div>
                         </div>

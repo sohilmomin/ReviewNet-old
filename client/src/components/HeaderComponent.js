@@ -112,7 +112,7 @@ class Header extends Component {
                                             </NavItem>
                                             <NavItem className='ml-auto navitem'>
                                                 <NavLink className='nav-link text-white' style={{ cursor: "pointer" }}>
-                                                    <Link className='text-white' to='/notavaliable'>
+                                                    <Link className='text-white' to='/companyprofile'>
                                                         <span className='fa fa-user pr-1'></span> {this.props.company.company.company.fullname}
                                                     </Link>
                                                 </NavLink>

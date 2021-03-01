@@ -294,7 +294,7 @@ class Product extends Component {
                     <div className='col-md-4 col-12 image-block'>
                         <img className="img img-responsive product-image " src={productPic} alt="Card image " />
                     </div>
-                    <div className='col-md-8 col-12 product-block p-0 p-md-3'>
+                    <div className='col-md-8 col-12 product-block p-1 p-md-3'>
                         <h5 className='mt-md-4 mt-2 mb-md-2 mb-2'>{product.productName}</h5>
                         <div className='row'>
                             <div className='col-md-6 col-12'>
@@ -393,7 +393,7 @@ class Reviews extends Component {
             const productDetails = this.props.products.products.filter(product => product._id === params.product)[0]
             console.log(productDetails)
             return (
-                <div className='container'>
+                <div className='container pl-0 pr-0'>
                     <div className='col-12 p-0 mt-1'>
                         <Breadcrumb>
                             <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>

@@ -22,6 +22,7 @@ import SubCatogeryProducts from './SubCatogeryProductComponent'
 import MyProducts from './MyProductsComponent'
 import ProductForm from './ProductFormComponent'
 import Reviews from './ReviewsComponent'
+import CompanyProfile from './CompanyProfileComponent'
 
 import { fetchProducts, fetchReviews, fetchUser, fetchCompany, postReview, postProduct, editProduct, postLike, postDislike, deleteReview, editReview, signUp, signIn, logout, companySignIn, companySignUp, logoutCompany } from '../redux/ActionCreaters'
 
@@ -79,11 +80,25 @@ class Main extends Component {
                     <Route exact path='/'>
                         <Index history={this.props.history} />
                     </Route>
+                    <Route exact path='/notloggedin'>
+                        <div className='container'>
+                            <div className='row mt-5 mb-5' align='center'>
+                                <div className='col-lg-4 col-12 m-auto bg-info pt-5 pb-5 text-white'>
+                                    <h1 className='not-avaliable-heading'>Are you Logged In ? </h1>
+                                    <p>Looks like you are not logged in , please Log In to view this page.</p>
+                                    <button className='btn-success text-white' onClick={() => { this.props.history.push('/signin') }}>Login here <span className='fa fa-space-shuttle'></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </Route>
                     <Route exact path='/home'>
                         <Home user={this.props.user} company={this.props.company} history={this.props.history} />
                     </Route>
                     <Route exact path='/userprofile'>
-                        <UserProfile user={this.props.user} />
+                        <UserProfile user={this.props.user} history={this.props.history} />
+                    </Route>
+                    <Route exact path='/companyprofile'>
+                        <CompanyProfile company={this.props.company} history={this.props.history} />
                     </Route>
                     <Route path='/signin'>
                         <Login signIn={this.props.signIn} user={this.props.user} history={this.props.history} />
