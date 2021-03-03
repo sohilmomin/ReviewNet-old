@@ -1,3 +1,4 @@
 # ReviewNet
-Live website : reviewnet.herokuapp.com
+[go to live website](https://reviewnet.herokuapp.com)
 
+https://reviewnet.herokuapp.com
