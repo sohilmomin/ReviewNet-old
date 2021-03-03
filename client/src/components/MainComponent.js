@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Route, BrowserRouter, Switch, Redirect, withRouter } from 'react-router-dom'
 import { ToastContainer } from "react-toastify";
+import { UncontrolledDropdown, DropdownItem, DropdownMenu, DropdownToggle } from 'reactstrap'
 import queryString from 'query-string';
 import { connect } from 'react-redux'
 //compoenents
@@ -118,7 +119,15 @@ class Main extends Component {
                                 <div className='col-2 d-lg-block d-none pl-0 pr-0 sidebar-block'>
                                     <SideBar />
                                 </div>
-                                <div className='col-12 col-md-10 ml-auto'>
+                                <div className='col-12 d-lg-none d-block'>
+                                    <UncontrolledDropdown >
+                                        <DropdownToggle caret className='catogery-mobile-dropdown col-12 '>Search Catogeries</DropdownToggle>
+                                        <DropdownMenu>
+                                            <SideBar />
+                                        </DropdownMenu>
+                                    </UncontrolledDropdown>
+                                </div>
+                                <div className='col-12 col-lg-10 ml-auto'>
                                     <Products products={this.props.products} reviews={this.props.reviews} history={this.props.history} company={this.props.company} postProduct={this.props.postProduct} editProduct={this.props.editProduct} />
                                 </div>
                             </div>
@@ -130,7 +139,7 @@ class Main extends Component {
                                 <div className='col-2 d-lg-block d-none pl-0 pr-0'>
                                     <SideBar />
                                 </div>
-                                <div className='col-md-10 col-12 ml-auto'>
+                                <div className='col-lg-10 col-12 ml-auto'>
                                     <ProductForm history={this.props.history} company={this.props.company} postProduct={this.props.postProduct} editProduct={this.props.editProduct} />
                                 </div>
                             </div>
@@ -142,7 +151,7 @@ class Main extends Component {
                                 <div className='col-2 d-lg-block d-none pl-0 pr-0'>
                                     <SideBar />
                                 </div>
-                                <div className='col-md-10 col-12 ml-auto'>
+                                <div className='col-lg-10 col-12 ml-auto'>
                                     <ProductForm product={(this.props.products.products.filter(product => product._id === (window.location.pathname.split('/')[2]))[0])} history={this.props.history} company={this.props.company} postProduct={this.props.postProduct} editProduct={this.props.editProduct} />
                                 </div>
                             </div>
@@ -154,7 +163,15 @@ class Main extends Component {
                                 <div className='col-2 d-lg-block d-none pl-0 pr-0'>
                                     <SideBar />
                                 </div>
-                                <div className='col-md-10 col-12 ml-auto'>
+                                <div className='col-12 d-lg-none d-block'>
+                                    <UncontrolledDropdown >
+                                        <DropdownToggle caret className='catogery-mobile-dropdown col-12 '>Search Catogeries</DropdownToggle>
+                                        <DropdownMenu>
+                                            <SideBar />
+                                        </DropdownMenu>
+                                    </UncontrolledDropdown>
+                                </div>
+                                <div className='col-lg-10 col-12 ml-auto'>
                                     <MyProducts products={this.props.products} reviews={this.props.reviews} history={this.props.history} company={this.props.company} postProduct={this.props.postProduct} editProduct={this.props.editProduct} />
                                 </div>
                             </div>
@@ -166,7 +183,15 @@ class Main extends Component {
                                 <div className='col-2 d-lg-block d-none pl-0 pr-0'>
                                     <SideBar />
                                 </div>
-                                <div className='col-md-10 col-12 ml-auto'>
+                                <div className='col-12 d-lg-none d-block'>
+                                    <UncontrolledDropdown >
+                                        <DropdownToggle caret className='catogery-mobile-dropdown col-12 '>Search Catogeries</DropdownToggle>
+                                        <DropdownMenu>
+                                            <SideBar />
+                                        </DropdownMenu>
+                                    </UncontrolledDropdown>
+                                </div>
+                                <div className='col-lg-10 col-12 ml-auto'>
                                     <CatogeryProducts products={this.props.products} reviews={this.props.reviews} history={this.props.history} />
                                 </div>
                             </div>
@@ -178,7 +203,15 @@ class Main extends Component {
                                 <div className='col-2 d-lg-block d-none pl-0 pr-0'>
                                     <SideBar />
                                 </div>
-                                <div className='col-md-10 col-12 ml-auto'>
+                                <div className='col-12 d-lg-none d-block'>
+                                    <UncontrolledDropdown >
+                                        <DropdownToggle caret className='catogery-mobile-dropdown col-12 '>Search Catogeries</DropdownToggle>
+                                        <DropdownMenu>
+                                            <SideBar />
+                                        </DropdownMenu>
+                                    </UncontrolledDropdown>
+                                </div>
+                                <div className='col-lg-10 col-12 ml-auto'>
                                     <SubCatogeryProducts products={this.props.products} reviews={this.props.reviews} history={this.props.history} />
                                 </div>
                             </div>
@@ -191,7 +224,15 @@ class Main extends Component {
                                 <div className='col-2 d-lg-block d-none pl-0 pr-0'>
                                     <SideBar />
                                 </div>
-                                <div className='col-md-10 col-12 ml-auto'>
+                                <div className='col-12 d-lg-none d-block'>
+                                    <UncontrolledDropdown >
+                                        <DropdownToggle caret className='catogery-mobile-dropdown col-12 '>Search Catogeries</DropdownToggle>
+                                        <DropdownMenu>
+                                            <SideBar />
+                                        </DropdownMenu>
+                                    </UncontrolledDropdown>
+                                </div>
+                                <div className='col-lg-10 col-12 ml-auto'>
                                     <Reviews reviews={this.props.reviews} postReview={this.props.postReview} postLike={this.props.postLike} postDislike={this.props.postDislike} deleteReview={this.props.deleteReview} editReview={this.props.editReview} products={this.props.products} user={this.props.user} />
                                 </div>
                             </div>

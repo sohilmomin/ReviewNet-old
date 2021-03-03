@@ -56,7 +56,13 @@ html {
   border-radius: 0px !important;
   margin:auto !important;
 }
-
+.catogery-mobile-dropdown{
+  background-color:  #072541 !important ;
+  border: 0px !important;
+  padding: 9px 11px !important;
+  border-radius: 10px !important;
+  margin:5px 0px !important;
+}
 .catogery-dropdown:hover{
   background-color:   #3a5370e5 !important ;
 }
